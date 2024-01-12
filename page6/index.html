@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Orbitron:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200&family=Roboto:wght@500&display=swap');
+    </style>
+</head>
+<body>
+    <script>
+        function redirect(url){
+            window.location.href = url;
+        }
+    </script>
+
+    <nav class="nav-bar">
+        <button id="menuBtn" class="menu-button" aria-controls="primary-navigation" aria-expanded="false">
+            <svg fill="var(--bg-color)" class="hamburger" viewBox="0 0 30 30" width="30">
+                <rect class="line top" width="20" height="2" x="5" y="10"></rect>
+                <rect class="line middle" width="20" height="2" x="5" y="16"></rect>
+                <rect class="line bottom" width="20" height="2" x="5" y="22"></rect>
+            </svg>
+        </button>
+        <a href="">Home</a>
+        <a href="https://github.com/szkutla1337" target="_blank">GitHub</a>
+        <a href="">Projects</a>
+    </nav>
+
+    <div class="menu-buttons-div" id="menuButtonsDiv">
+        <a href="index.html">Home</a>
+        <a target="_blank" href="https://github.com/szkutla1337">GitHub</a>
+        <a href="">Projects</a>
+    </div>
+
+    <div class="projects-main-div">
+        <div class="projects-title-div">
+            <h1>Projects</h1>
+        </div>
+        <div class="projects-div">
+            <div class="project-div">
+                <h2>Pynite</h2>
+                <p>Graphical library made in pygame which is used to create simple applications using buttons, labels, textboxes, sliders and more...</p>
+                <button onclick="redirect('pynite-about.html');">Learn more</button>
+            </div>
+            <div class="project-div">
+                <h2>Pynite Editor</h2>
+                <p>Graphical application made using pynite which is used to build application in graphcial way</p>
+                <button>Learn more</button>
+            </div>
+        </div>
+        <div class="bottom-div">
+            <div class="a-div">
+                <a href="">Home</a>
+                <a href="https://github.com/szkutla1337" target="_blank">GitHub</a>
+                <a href="">Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

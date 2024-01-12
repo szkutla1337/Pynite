@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-pynite-about.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Orbitron:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200&family=Roboto:wght@500&display=swap');
+    </style>
+</head>
+<body>
+    <script>
+        function redirect(url){
+            window.location.href = url;
+        }
+    </script>
+
+    <nav class="nav-bar">
+        <button id="menuBtn" class="menu-button" aria-controls="primary-navigation" aria-expanded="false">
+            <svg fill="var(--bg-color)" class="hamburger" viewBox="0 0 30 30" width="30">
+                <rect class="line top" width="20" height="2" x="5" y="10"></rect>
+                <rect class="line middle" width="20" height="2" x="5" y="16"></rect>
+                <rect class="line bottom" width="20" height="2" x="5" y="22"></rect>
+            </svg>
+        </button>
+        <a href="index.html">Home</a>
+        <a href="https://github.com/szkutla1337" target="_blank">GitHub</a>
+        <a href="">Projects</a>
+    </nav>
+
+    <div class="menu-buttons-div" id="menuButtonsDiv">
+        <a href="index.html">Home</a>
+        <a target="_blank" href="https://github.com/szkutla1337">GitHub</a>
+        <a href="">Projects</a>
+    </div>
+
+    <div class="projects-main-div">
+
+        <div class="viewport-div">
+            <h1>What's Pynite?</h1>
+            <p>Pynite is an library made in Pygame which is used to create window applications and provide user with simple ways 
+                to draw shapes and create useful things such as buttons, slider bars, check boxes, animations, text boxes etc.
+                which you can freerly customize. It can also be used to create 2D games.
+                Pynite has also some useful classes and functions about which you can learn more in the documentaion.
+            </p>
+            <h2>What libraries does Pynite use?</h2>
+            <ul>
+                <li onclick="redirect('https://pypi.org/project/pygame/');">Pygame</li>
+                <li onclick="redirect('https://pypi.org/project/pyperclip/');">Pyperclip</li>
+                <li onclick="redirect('https://pypi.org/project/numpy/');">Numpy</li>
+                <li onclick="redirect('https://pypi.org/project/pywin32/');">Pywin32</li>
+                <li onclick="redirect('https://pypi.org/project/mutagen/');">Mutagen</li>
+            </ul>
+            <div class="get-started-div">
+                <h3>Get Started with Pynite</h3>
+                <p>Download the latest version of Pynite or check the documentation</p>
+                <div class="buttons-div">
+                    <button>Download</button>
+                    <button onclick="redirect('pynite-documentation.html');">Documentation</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-div">
+            <div class="a-div">
+                <a href="">Home</a>
+                <a href="https://github.com/szkutla1337" target="_blank">GitHub</a>
+                <a href="">Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,184 @@
+:root{
+    --theme-color: #804EDD;
+    --theme-hover-color: #733fd4;
+}
+
+.viewport-div{
+    position: relative;
+    width: 80%;
+    min-height: 500px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.viewport-div h1{
+    position: relative;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+.viewport-div p{
+    position: relative;
+    color: rgb(235,235,235);
+    text-align: left;
+    line-height: 1.6rem;
+    background-color: transparent;
+    max-width: 80%;
+}
+
+.viewport-div h2{
+    position: relative;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+/* .viewport-div h1::after{
+    content: "";
+    position: relative;
+    display: flex;
+    width: 35%;
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+    background-color: rgb(200,200,200);
+}
+
+.viewport-div h2::after{
+    content: "";
+    position: relative;
+    display: flex;
+    width: 35%;
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+    background-color: rgb(200,200,200);
+} */
+
+.viewport-div ul{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewport-div li{
+    color: rgb(235,235,235);
+    margin-top: 6px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 250ms;
+}
+
+.viewport-div li:hover{
+    color: white;
+    font-weight: 600;
+}
+
+
+.get-started-div{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    min-height: 175px;
+    margin-top: 75px;
+    background-image: linear-gradient(90deg, rgb(75,10,175), var(--theme-color), rgb(75,10,175));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.75rem;
+}
+
+.get-started-div h3{
+    position: relative;
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.get-started-div p{
+    position: relative;
+    color: rgb(235,235,235);
+    margin-top: 8px;
+    text-align: center;
+}
+
+.get-started-div .buttons-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin-top: 14px;
+    width: 100%;
+    margin-bottom: 14px;
+    gap: 20px;
+}
+
+.get-started-div button{
+    position: relative;
+    max-width: 200px;
+    width: 200px;
+    min-height: 40px;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    transition: background-color 300ms, color 300ms;
+    color: white;
+    word-break: break-all;
+}
+
+.get-started-div button:hover{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 550px){
+    .viewport-div{
+        align-items: center;
+    }
+
+    .viewport-div h1::after{
+        height: 0;
+    }
+
+    .viewport-div h1{
+        width: 90%;
+        text-align: left;
+    }
+
+    .viewport-div h2{
+        width: 90%;
+    }
+
+    .viewport-div p{
+        max-width: 90%;
+    }
+
+    .viewport-div ul{
+        width: 90%;
+    }
+
+    .viewport-div h2::after{
+        height: 0;
+    }
+
+    .viewport-div ul{
+        list-style-type: none;
+        align-items: center;
+        padding: 0;
+    }
+
+    .get-started-div .buttons-div{
+        flex-direction: column;
+    }
+
+    .get-started-div .buttons-div button{
+        width: 90%;
+    }
+}

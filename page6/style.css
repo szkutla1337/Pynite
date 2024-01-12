@@ -1,0 +1,355 @@
+:root{
+    --bg-color: rgb(10,10,10);
+    --nav-bar-color: rgb(0,0,0);
+    --nav-bar-outline-color: rgb(65,65,65);
+    --theme-color: #804EDD;
+    --theme-hover-color: #733fd4;
+    font-family: Montserrat, sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.nav-bar{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 68px;
+    left: 0;
+    top: 0;
+    background-color: var(--nav-bar-color);
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 999;
+}
+
+.nav-bar a{
+    position: relative;
+    color: rgb(220,220,220);
+    font-size: 1rem;
+    text-decoration: none;
+    height: 100%;
+    right: 250px;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms;
+}
+
+.nav-bar a::after{
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 250ms;
+}
+
+.nav-bar a:hover::after{
+    transform: scaleX(1);
+}
+
+.nav-bar a:hover{
+    color: white;
+}
+
+.nav-bar .menu-button{
+    position: fixed;
+    left: 0;
+    margin-left: 25px;
+
+    border: 1px solid transparent;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    visibility: hidden;
+
+    --bg-color: rgb(255,255,255)
+}
+
+.nav-bar .menu-button .line{
+    transition: 
+        y 150ms ease-in 150ms,
+        rotate 150ms ease-in,
+        opacity 0ms 150ms;
+    
+    transform-origin: center;
+}
+
+.nav-bar .menu-button[aria-expanded="true"] .line{
+    transition: 
+        y 150ms ease-in,
+        rotate 150ms ease-in 150ms,
+        opacity 0ms 150ms;
+}
+
+.nav-bar .menu-button[aria-expanded="true"] :is(.top, .bottom){
+    y: 14;
+}
+
+.menu-button[aria-expanded="true"] .top {
+    rotate: 45deg;
+  }
+  
+.menu-button[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.menu-button[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+}
+
+.menu-buttons-div{
+    position: fixed;
+    left: 0;
+    top: -200px;
+    z-index: 998;
+    width: 100%;
+    height: 140px;
+    background-color: rgba(0,0,0,0.9);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: 250ms, visibility 0ms;
+}
+
+.menu-buttons-div a{
+    position: relative;
+    width: 90%;
+    padding: 8px 8px 8px 8px;
+    color: whitesmoke;
+    margin-bottom: 3px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 0;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: 200ms;
+}
+
+.menu-buttons-div a:hover{
+    background-color: var(--nav-bar-a-hover-bg);
+    color: var(--theme-color);
+}
+
+.projects-main-div{
+    position: absolute;
+    width: 100%;
+    min-height: 400px;
+    left: 0;
+    top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.projects-title-div h1{
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.projects-div{
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-div{
+    position: relative;
+    width: 400px;
+    max-width: 400px;
+    min-height: 365px;
+    background-color: rgb(18,19,20);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+    border: 1px solid rgb(40,41,42);
+}
+
+.project-div h2{
+    position: relative;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+    font-size: 32px;
+    margin-top: 25px;   
+}
+
+.project-div p{
+    position: relative;
+    word-wrap: break-word;
+    background-color: transparent;
+    width: 80%;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: auto;
+}
+
+.project-div button{
+    position: relative;
+    width: 80%;
+    min-height: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: var(--theme-color);
+    color: white;
+    font-size: 16px;
+    border: 0;
+    margin-top: 20px;
+    transition: background-color 300ms;
+}
+
+.project-div button:hover{
+    background-color: var(--theme-hover-color);
+}
+
+.project-div:nth-child(1){
+    margin-right: 20px;
+}
+
+.project-div:nth-child(2){
+    margin-left: 20px;
+}
+
+.bottom-div{
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    background-color: black;
+    bottom: 0;
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.bottom-div .a-div{
+    position: relative;
+    width: auto;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.bottom-div .a-div a{
+    position: relative;
+    color: rgb(225,225,225);
+    text-decoration: none;
+    display: flex;
+    transition: color 250ms;
+}
+
+.bottom-div .a-div a:hover{
+    color: white;
+}
+
+.bottom-div .a-div a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background-color: var(--theme-color);
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: 250ms;
+}
+
+.bottom-div .a-div a:hover::after{
+    width: 140%;
+    height: 150%;
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 1000px){
+    .project-div{
+        width: 325px;
+        min-height: 325px;
+    }
+}
+
+@media (min-width: 875px){
+    .menu-buttons-div{
+       visibility: hidden; 
+    }
+}
+
+@media (max-width: 875px){
+    .nav-bar a{
+        visibility: hidden;
+    }
+    .nav-bar .menu-button{
+        visibility: visible;
+    }
+}
+
+@media (max-width: 750px){
+    .projects-div{
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .project-div:nth-child(1){
+        margin-right: 0px;
+    }
+    
+    .project-div:nth-child(2){
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 480px){
+    .project-div:nth-child(1){
+        
+    }
+    
+    .project-div:nth-child(2){
+        
+    }
+}
+
+@media (max-width: 410px){
+    .project-div:nth-child(1){
+        width: 80%;
+    }
+    
+    .project-div:nth-child(2){
+        width: 80%;
+    }
+}
+
+@media (max-width: 270px){
+    .bottom-div .a-div{
+        flex-direction: column;
+        height: 130px;
+    }
+}

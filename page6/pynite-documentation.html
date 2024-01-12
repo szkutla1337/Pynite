@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-pynite-about.css">
+    <link rel="stylesheet" href="style-pynite-documentation.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Orbitron:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200&family=Roboto:wght@500&display=swap');
+    </style>
+</head>
+<body>
+    <script>
+        function redirect(url){
+            window.location.href = url;
+        }
+    </script>
+
+    <nav class="nav-bar">
+        <button id="menuBtn" class="menu-button" aria-controls="primary-navigation" aria-expanded="false">
+            <svg fill="var(--bg-color)" class="hamburger" viewBox="0 0 30 30" width="30">
+                <rect class="line top" width="20" height="2" x="5" y="10"></rect>
+                <rect class="line middle" width="20" height="2" x="5" y="16"></rect>
+                <rect class="line bottom" width="20" height="2" x="5" y="22"></rect>
+            </svg>
+        </button>
+        <a href="index.html">Home</a>
+        <a href="https://github.com/szkutla1337" target="_blank">GitHub</a>
+        <a href="">Projects</a>
+    </nav>
+
+    <div class="menu-buttons-div" id="menuButtonsDiv">
+        <a href="index.html">Home</a>
+        <a target="_blank" href="https://github.com/szkutla1337">GitHub</a>
+        <a href="">Projects</a>
+    </div>
+
+    <div class="projects-main-div">
+
+        <div class="viewport-div">
+            <h1 class="learn-title">Learn about attributes of widgets in Pynite</h1>
+
+            <div class="widget-div" id="buttonWidgetDiv">
+                <button id="buttonWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Button</span>
+                    <span id="buttonSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="buttonDesc" class="description-container">
+                    <p><span style="font-weight: 600;">x</span> - places button on the screen in 'x' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">y</span> - places button on the screen in 'y' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">background</span> - changes color of the button, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">hoverBackground</span> - changes color of the button when mouse is hovering over it, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">activeBackground</span> - changes color of the button when the button is clicked, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">text</span> changes text that's displayed in the button <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">textColor</span> changes color of the text that's displayed in the button, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">hoverTextColor</span> changes color of the text when mouse is hovering over it, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">activeTextColor</span> changes color of the text when the button is clicked, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">outlineWidth</span> - changes width of an outline around the button <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">outlineColor</span> - changes color of the outline, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">hoverOutlineColor</span> - changes color of the outline when mouse is hovering over it, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">activeOutlineColor</span> - changes color of the outline when the button is clicked, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">fontName</span> - changes font of the text displayed in the button, e.g: ".ttf" or "Arial" <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">fontSize</span> - changes size of the text displayed in the button <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">autoResizing</span> - determines if the button resizes automatically based on the length of text <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">width</span> - changes width of the button (when autoResizing is set to true then it adds specified value to current width) <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">height</span> - changes height of the button (when autoResizing is set to true then it adds specified value to current height) <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">changeCursor</span> - determines if cursor should change to "pointer" whenever the mouse is hovering over the button <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">borderRadius</span> - sets radius of the button border <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">bordersToHide</span> - hides roundness of specified corners, e.g: ["topleft", "bottomright"] <span style="color: rgb(47, 233, 137);">&ltlist&gt</span></p>
+                    <p><span style="font-weight: 600;">clickAnimation</span> - determines if the button should "jump" or stay static when clicked <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">hide</span> - determines if button should be rendered <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">disable</span> - disables/enables the button (when false the button won't work) <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">textPosition</span> - places text of the button in specified position, e.g: "center", "left", "right" <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">textOffsetX</span> - offsets text position in 'x' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">textOffsetY</span> - offsets text position in 'y' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                </div>
+            </div>
+            
+            <div class="widget-div" id="labelWidgetDiv">
+                <button id="labelWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Label</span>
+                    <span id="labelSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="labelDesc" class="description-container">
+                    <p><span style="font-weight: 600;">x</span> - places label on the screen in 'x' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">y</span> - places label on the screen in 'y' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">text</span> - changes text that's being displayed <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">textColor</span> - changes color of the text that's displayed, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">background</span> - changes background color of the label (default: transparent), e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">backgroundWidth</span> - changes width of the background <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">backgroundHeight</span> - changes height of the background <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">charSpacing</span> - adjusts spacing between the letters (default: 0) <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">charColor</span> - changes color of individual letters that have been specified, e.g: [(index, (r,g,b))] <span style="color: rgb(47, 233, 137);">&ltlist&gt</span></p>
+                    <p><span style="font-weight: 600;">hide</span> - determines if label should be rendered <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                    <p><span style="font-weight: 600;">fontName</span> - changes font of the text, e.g: ".ttf" or "Arial" <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">fontSize</span> - changes size of the text <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="rectangleWidgetDiv">
+                <button id="rectangleWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Rectangle</span>
+                    <span id="rectangleSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="rectangleDesc" class="description-container">
+                    <p><span style="font-weight: 600;">x</span> - places rectangle on the screen in 'x' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">y</span> - places rectangle on the screen in 'y' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">background</span> - changes color of the rectangle, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">width</span> - changes width of the rectangle <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">height</span> - changes height of the rectangle <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">thickness</span> - changes thicknes of the rectangle (default: 0) <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">borderRadius</span> - sets radius of the rectangle border <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">hide</span> - determines if rectangle should be rendered <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                </div>
+            </div>
+
+            <div class="widget-div" id="textBoxWidgetDiv">
+                <button id="textBoxWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">TextBox</span>
+                    <span id="textBoxSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="textBoxDesc" class="description-container">
+                    <p><span style="font-weight: 600;">x</span> - places textbox on the screen in 'x' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">y</span> - places textbox on the screen in 'y' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">background</span> - changes background color of the textbox, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">activeBackground</span> - changes color of the button when the textbox is active, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">width</span> - changes width of the textbox <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">height</span> - changes height of the textbox <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">borderRadius</span> - sets radius of the textbox border <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">maxCharacters</span> - sets maximum amount of characters that can be typed into textbox <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">numbersOnly</span> - when true, only numbers can be written to the textbox <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                    <p><span style="font-weight: 600;">lettersOnly</span> - when true, only letters can be written to the textbox <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                    <p><span style="font-weight: 600;">exceptionChars</span> - determines which characters can be written tot the textbox, e.g: ["v", "g", "s", "r"] <span style="color: rgb(47, 233, 137);">&ltlist&gt</span></p>                    
+                    <p><span style="font-weight: 600;">text</span> - changes text that's being displayed in the textbox <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">placeholderText</span> - sets placeholder text in the textbox to specified value <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">textColor</span> - changes color of the text that's displayed in the textbox, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">placeholderColor</span> - changes color of the placeholder text that's displayed in the textbox, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">changeCursor</span> - determines if cursor should change to "IBeam" whenever the mouse is hovering over the textbox <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">fontName</span> - changes font of the text, e.g: ".ttf" or "Arial" <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">fontSize</span> - changes size of the text <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">cursorColor</span> - changes color of the blinking cursor that indicates current position in the textbox, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">showOutline</span> - determines if outline of the textbox should be rendered <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                    <p><span style="font-weight: 600;">disable</span> - disables/enables the textbox (when false the textbox won't work) <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">outlineWidth</span> - changes width of an outline around the textbox <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">outlineColor</span> - changes color of the outline, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">hoverOutlineColor</span> - changes color of the outline when mouse is hovering over it, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">activeOutlineColor</span> - changes color of the outline when the textbox is active, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">highlightColor</span> - changes the text selection color, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">bold</span> - determines if text sould be bold <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                    <p><span style="font-weight: 600;">hide</span> - determines if textbox should be rendered <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                </div>
+            </div>
+
+            <div class="widget-div" id="imageWidgetDiv">
+                <button id="imageWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Image</span>
+                    <span id="imageSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="imageDesc" class="description-container">
+                    <p><span style="font-weight: 600;">x</span> - places image on the screen in 'x' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">y</span> - places image on the screen in 'y' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">image</span> - changes image that's being displayed (takes path to the image) <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">scale</span> - changes scale of the image (default: 1) <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">fill</span> - fills the transparent parts of the image with specified color, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">hide</span> - determines if image should be rendered <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                </div>
+            </div>
+
+            <div class="widget-div" id="imageButtonWidgetDiv">
+                <button id="imageButtonWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">ImageButton</span>
+                    <span id="imageButtonSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="imageButtonDesc" class="description-container">
+                    <p><span style="font-weight: 600;">x</span> - places imagebutton on the screen in 'x' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">y</span> - places imagebutton on the screen in 'y' direction <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">image</span> - changes image that's being displayed (takes path to the image) <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">image2</span> - changes image that's being displayed when mouse is hovering over the imagebutton (takes path to the image) <span style="color: rgb(47, 233, 137);">&ltstr&gt</span></p>
+                    <p><span style="font-weight: 600;">scale</span> - changes scale of the image (default: 1) <span style="color: rgb(47, 233, 137);">&ltint&gt</span></p>
+                    <p><span style="font-weight: 600;">fill</span> - fills the transparent parts of the image with specified color, e.g: (r, g, b) <span style="color: rgb(47, 233, 137);">&lttuple&gt</span></p>
+                    <p><span style="font-weight: 600;">changeCursor</span> - determines if cursor should change to "pointer" whenever the mouse is hovering over the imagebutton <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">clickAnimation</span> - determines if the imagebutton should "jump" or stay static when clicked <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">disable</span> - disables/enables the imagebutton (when false the button won't work) <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>
+                    <p><span style="font-weight: 600;">hide</span> - determines if imagebutton should be rendered <span style="color: rgb(47, 233, 137);">&ltbool&gt</span></p>                    
+                </div>
+            </div>
+
+            <div class="widget-div" id="sliderWidgetDiv">
+                <button id="sliderWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Slider</span>
+                    <span id="sliderSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="sliderDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="switchWidgetDiv">
+                <button id="switchWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Switch</span>
+                    <span id="switchSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="switchDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="circleWidgetDiv">
+                <button id="circleWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Circle</span>
+                    <span id="circleSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="circleDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="colorPickerWidgetDiv">
+                <button id="colorPickerWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">ColorPicker</span>
+                    <span id="colorPickerSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="colorPickerDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="surfaceWidgetDiv">
+                <button id="surfaceWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Surface</span>
+                    <span id="surfaceSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="surfaceDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="animationWidgetDiv">
+                <button id="animationWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">Animation</span>
+                    <span id="animationSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="animationDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="progressBarWidgetDiv">
+                <button id="progressBarWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">ProgressBar</span>
+                    <span id="progressBarSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="progressBarDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+            <div class="widget-div" id="checkBoxWidgetDiv">
+                <button id="checkBoxWidget">Learn attributes of&nbsp;<span style="font-weight: 600; color: rgb(196, 166, 240);">CheckBox</span>
+                    <span id="checkBoxSpanPlus" class="plus-span">+</span>
+                </button>
+                <div id="checkBoxDesc" class="description-container">
+                    <p>Test test test tbuttonWidgetest test test</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom-div">
+            <div class="a-div">
+                <a href="">Home</a>
+                <a href="https://github.com/szkutla1337" target="_blank">GitHub</a>
+                <a href="">Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
